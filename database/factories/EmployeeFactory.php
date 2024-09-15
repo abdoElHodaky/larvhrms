@@ -54,9 +54,9 @@ class EmployeeFactory extends Factory
             'emergency_contact' => $this->faker->phoneNumber,
             'cv' => null,
             'image' => null,
-            'position_id' => function () {
+            'position_id' =>1/* function () {
                 return \App\Models\Position::inRandomOrder()->first()->id;
-            },
+            }*/,
             'training' => $this->faker->boolean,
             'schedule_id' => null,
         ];
