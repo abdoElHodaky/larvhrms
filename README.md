@@ -124,9 +124,6 @@ Key tables and their relationships:
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
-
-For questions or support, contact [omar.7tech@gmail.com](mailto:omar.7tech@gmail.com).
 
 ## Live Demo
 
