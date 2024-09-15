@@ -27,12 +27,13 @@ return new class extends Migration {
             $table->string('emergency_contact');
             $table->string('cv')->nullable()->default(null);
             $table->string('image')->nullable()->default(null);
-            $table->unsignedBigInteger('position_id')->nullable(); // Define foreign key column
+            //$table->unsignedBigInteger('position_id')->nullable(); // Define foreign key column
             $table->smallInteger('training')->default(0);
             $table->date("start_date")->nullable();
             $table->softDeletes();
             $table->timestamps();
-            $table->foreign('position_id')->references('id')->on('positions')->onDelete('set null');
+            $table->foreignId('position_id')->nullable()->constrained('positions')->onDelete('set null');
+            //$table->foreign('position_id')->references('id')->on('positions')->onDelete('set null');
         });
     }
 
