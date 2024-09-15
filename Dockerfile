@@ -27,7 +27,7 @@ RUN chmod -R 777 . && \
 composer install && npm install && \
 npm run build && php artisan storage:link
 #RUN php artisan db:wipe --drop-types --force 
-RUN php artisan migrate --force && php artisan db:seed --force
+#RUN php artisan migrate --force && php artisan db:seed --force
 
 #RUN php artisan optimize && php artisan filament:optimize 
-EXPOSE 81 5173
+EXPOSE 8080 5173
