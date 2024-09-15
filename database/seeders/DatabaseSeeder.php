@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-       EmployeesTableSeeder::run();
-       UsersTableSeeder::run();
-       EmployeeSeeder::run();
+       new EmployeesTableSeeder()::run();
+       new UsersTableSeeder()::run();
+       new EmployeeSeeder()::run();
     }
 }
