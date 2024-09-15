@@ -127,7 +127,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Live Demo
 
-Check out the live demo: [HRMS Live Demo](http://hrms7.000.pe)
+Check out the live demo: [HRMS Live Demo](https://larvhrms.fly.dev)
 
 
 
