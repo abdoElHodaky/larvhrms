@@ -33,7 +33,7 @@ class EmployeesTableSeeder extends Seeder
                 'emergency_contact' => $faker->phoneNumber,
                 'cv' => 'path/to/cv.pdf', // Replace with actual path if available
                 'image' => 'path/to/image.jpg', // Replace with actual path if available
-                'position' => $faker->randomElement(['developer', 'manager', 'assistant']),
+                //'position' => $faker->randomElement(['developer', 'manager', 'assistant']),
                 'training' => $faker->boolean(50),
             ]);
         }
