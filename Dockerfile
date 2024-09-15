@@ -26,8 +26,8 @@ echo 'pm.max_requests = 500' >> /usr/local/etc/php-fpm.d/zz-docker.conf
 RUN chmod -R 777 . && \
 composer install && npm install && \
 npm run build && php artisan storage:link
-#RUN php artisan db:wipe --drop-types --force 
-#RUN php artisan migrate --force && php artisan db:seed --force
+RUN php artisan db:wipe --drop-types --force 
+RUN php artisan migrate --force && php artisan db:seed --force
 
-RUN php artisan optimize && php artisan filament:optimize 
+#RUN php artisan optimize && php artisan filament:optimize 
 EXPOSE 81 5173
