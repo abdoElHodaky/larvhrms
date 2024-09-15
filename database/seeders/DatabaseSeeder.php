@@ -20,6 +20,13 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $positions=['developer', 'manager', 'assistant'];
+        foreach($postions as $key=>$value){
+            \App\Models\Postion::create([
+                "name"=>$value,
+                "salary"=>2000*10**$key
+            ]);
+        }
        (new EmployeesTableSeeder())->run();
        (new UsersTableSeeder())->run();
        (new EmployeeSeeder())->run();
