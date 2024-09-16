@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         foreach($postions as $key=>$value){
             \App\Models\Postion::create([
                 "name"=>$value,
-                "salary"=>2000*10**$key
+                "salary"=>20000
             ]);
         }
        (new EmployeesTableSeeder())->run();
