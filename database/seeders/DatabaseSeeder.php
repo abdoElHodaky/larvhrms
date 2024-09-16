@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
                 "salary"=>20000
             ]);
         }
-       (new EmployeesTableSeeder())->run();
+      // (new EmployeesTableSeeder())->run();
        (new UsersTableSeeder())->run();
        (new EmployeeSeeder())->run();
     }
