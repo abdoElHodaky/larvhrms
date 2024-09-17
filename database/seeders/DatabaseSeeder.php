@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]
-        $positions=['developer', 'manager', 'assistant'];
+      /*  $positions=['developer', 'manager', 'assistant'];
         foreach($positions as $key=>$value){
             \App\Models\Position::create([
                 "name"=>$value,
@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         }
       // (new EmployeesTableSeeder())->run();
        (new UsersTableSeeder())->run();
-       (new EmployeeSeeder())->run();
+       (new EmployeeSeeder())->run();*/
         $employees=\App\Models\Employee::all();
         $employees->each(function ($employee,$key){
         $employee->update(["image"=>"//avatar.iran.liara.run/public/".$employee->gender=="male"?"boy":"girl".
