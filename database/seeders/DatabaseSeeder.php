@@ -35,6 +35,6 @@ class DatabaseSeeder extends Seeder
         ["image"=>"https://avatar.iran.liara.run/public/".$employee->gender=="male"?"boy":"girl".
          "?username={$employee->first_name}-{$employee->last_name}"
         ]
-        )
+        );
     }
 }
