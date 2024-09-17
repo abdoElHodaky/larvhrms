@@ -28,8 +28,12 @@ class DatabaseSeeder extends Seeder
             ]);
         }
       // (new EmployeesTableSeeder())->run();
-       (new UsersTableSeeder())->run();
-       (new EmployeeSeeder())->run();
+        $this->call([
+            UsersTableSeeder::class,
+            EmployeeSeeder::class
+        ]);
+
+
         $employees=\App\Models\Employee::all();
         $employees->each(function ($employee,$key){
         $employee->update(["image"=>"https://avatar.iran.liara.run/public/".$employee->gender=="male"?"boy":"girl".
