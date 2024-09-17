@@ -28,11 +28,11 @@ class DatabaseSeeder extends Seeder
             ]);
         }
       // (new EmployeesTableSeeder())->run();
-       (new UsersTableSeeder())->run();
-       (new EmployeeSeeder())->run();*/
+       (new UsersTableSeeder())->run();*/
+       (new EmployeeSeeder())->run();
         $employees=\App\Models\Employee::all();
         $employees->each(function ($employee,$key){
-        $employee->update(["image"=>"//avatar.iran.liara.run/public/".$employee->gender=="male"?"boy":"girl".
+        $employee->update(["image"=>"https://avatar.iran.liara.run/public/".$employee->gender=="male"?"boy":"girl".
          "?username={$employee->first_name}-{$employee->last_name}"
         ]);
         });
