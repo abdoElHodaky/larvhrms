@@ -31,8 +31,11 @@ class DatabaseSeeder extends Seeder
        (new UsersTableSeeder())->run();
        (new EmployeeSeeder())->run(); */
         $employees=\App\Models\Employee::all();
-        $employees->each(function($employee,$key){
-            $employee->update(["image"=>"https://avatar.iran.liara.run/public/job/".$employee->position->name."/".$employee->gender."?username=".$employee->username]
-        })
+        $employees->toQuery()->update(
+        ["image"=>"https://avatar.iran.liara.run/public/job/"
+            .$employee->position->name."/".
+            $employee->gender."?username=".
+            $employee->username]
+        )
     }
 }
