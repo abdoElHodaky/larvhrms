@@ -17,7 +17,7 @@
                     </div>
                 </div>
             @else
-                <img src="{{ asset('default_images/user.png') }}" class="card-img-top image-preview" alt="Default User Image" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <img src="{{ $employee->image }}" class="card-img-top image-preview" alt="Default User Image" data-bs-toggle="modal" data-bs-target="#imageModal">
                 <div class="card-body">
                     <h5 class="card-title">No Image</h5>
                     <div class="card-text">
