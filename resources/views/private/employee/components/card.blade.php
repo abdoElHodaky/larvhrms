@@ -3,7 +3,7 @@
     <div class="card-body">
         <div class="row align-items-center">
             <div class="col-md-4">
-                <img src="@if ($employee->image) {{ asset('storage/' . $employee->image) }} @else {{ asset('default_images/user.png') }} @endif"
+                <img src="{{$employee->image}}"
                     alt="Employee Image" class="img-fluid rounded-circle"
                     style="width: 150px; height: 150px; object-fit: cover;">
             </div>
