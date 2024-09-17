@@ -31,10 +31,10 @@ class DatabaseSeeder extends Seeder
        (new UsersTableSeeder())->run();
        (new EmployeeSeeder())->run(); */
         $employees=\App\Models\Employee::all();
-        $employees->toQuery()->update(
-        ["image"=>"https://avatar.iran.liara.run/public/".$employee->gender=="male"?"boy":"girl".
+        $employees->each(function ($employee,$key){
+        $employee->update (["image"=>"https://avatar.iran.liara.run/public/".$employee->gender=="male"?"boy":"girl".
          "?username={$employee->first_name}-{$employee->last_name}"
-        ]
-        );
+        ])
+        });
     }
 }
