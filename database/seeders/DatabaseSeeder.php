@@ -32,8 +32,8 @@ class DatabaseSeeder extends Seeder
        (new EmployeeSeeder())->run(); */
         $employees=\App\Models\Employee::all();
         $employees->toQuery()->update(
-        ["image"=>"https://avatar.iran.liara.run/public/job/{$employee->position->name}/".
-            $employee->gender."?username={$employee->first_name}-{$employee->last_name}"
+        ["image"=>"https://avatar.iran.liara.run/public/".$employee->gender=="male"?"boy":"girl".
+         "?username={$employee->first_name}-{$employee->last_name}"
         ]
         )
     }
