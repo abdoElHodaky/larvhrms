@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]
-      / $positions=['developer', 'manager', 'assistant'];
+      $positions=['developer', 'manager', 'assistant'];
         foreach($positions as $key=>$value){
             \App\Models\Position::create([
                 "name"=>$value,
