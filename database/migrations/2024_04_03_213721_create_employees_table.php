@@ -25,8 +25,8 @@ return new class extends Migration {
             $table->string('address');
             $table->decimal('salary', 10, 2);
             $table->string('emergency_contact');
-            $table->string('cv')->nullable()->default(null);
-            $table->string('image')->nullable()->default(null);
+            $table->binary('cv')->nullable()->default(null);
+            $table->binary('image')->nullable()->default(null);
             //$table->unsignedBigInteger('position_id')->nullable(); // Define foreign key column
             $table->smallInteger('training')->default(0);
             $table->date("start_date")->nullable();
