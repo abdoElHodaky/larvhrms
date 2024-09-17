@@ -3,7 +3,7 @@
     <div class="card-body">
         <div class="row align-items-center">
             <div class="col-md-4">
-                {{$employee->image}}
+                
                 <img src="{{$employee->image}}"
                     alt="Employee Image" class="img-fluid rounded-circle"
                     style="width: 150px; height: 150px; object-fit: cover;">
