@@ -34,11 +34,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        $employees=\App\Models\Employee::all();
-        $employees->each(function ($employee,$key){
+      /*  $employees=\App\Models\Employee::all();
+       $employees->each(function ($employee,$key){
         $employee->update(["image"=>"https://avatar.iran.liara.run/public/".$employee->gender=="male"?"boy":"girl".
          "?username={$employee->first_name}"
         ]);
-        });
+        });*/
     }
 }
