@@ -8,6 +8,7 @@
     <link rel="preload" href="{{ asset('css/bootstrap.css') }}" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"></noscript>
+    <script async src="{{asset('/swreg.js')}}" ></script>
 </head>
 <body>
     @include('components.nav')
