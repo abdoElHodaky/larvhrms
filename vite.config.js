@@ -9,9 +9,9 @@ export default defineConfig({
             workbox: {
 	globDirectory: 'public/',
 	globPatterns: [
-		'**/*.{css,png,jpg,ico,html,js,txt}'
+		'**/*.{css,png,jpg,ico,js,txt}'
 	],
-	navigateFallback:"/offline.html",
+	navigateFallback:"/offline",
 	runtimeCaching: [{
     urlPattern: ({request, url}) =>url.includes("cdn")==true,
     handler: 'NetworkFirst',
@@ -61,6 +61,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'resources/js/swreg.js'
             ],
             refresh: true,
         }),
