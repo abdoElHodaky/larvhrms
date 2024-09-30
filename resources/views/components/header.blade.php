@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"></noscript>
     @vite(["resources/js/swreg.js"])
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
 </head>
 <body>
     @include('components.nav')
