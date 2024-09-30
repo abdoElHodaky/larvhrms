@@ -27,7 +27,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/offline",function (\Request $request)=>{
     return file_get_contents(public_path()."/offline.html");
-})
+});
+
 Route::get('/login', [LoginController::class, "index"])->name("login");
 Route::post('/login', [LoginController::class, "auth"])->name("auth");
 
