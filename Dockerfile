@@ -9,7 +9,7 @@ ENV RUN_SCRIPTS 1
 ENV REAL_IP_HEADER 1
 
 # Laravel config
-ENV APP_KEY base64:eW4yeWxrcmpkaHJxMHVnOWM1cXhjZjh1dGRrcG8ycXc=
+ENV APP_KEY base64:Zndza2ttMm9kbnNkcmlmeHlmYnlnb3RzOTJxMnBnNHY=
 ENV APP_ENV production
 ENV APP_DEBUG true
 ENV LOG_CHANNEL stderr
