@@ -1,4 +1,4 @@
-FROM spacetabio/roadrunner-alpine:8.2-base-1.11.0
+FROM spacetabio/roadrunner-alpine:8.1-base-1.11.0
 RUN apk add -U --no-cache nghttp2-dev nodejs npm unzip tzdata
 COPY . /var/www/html
 
