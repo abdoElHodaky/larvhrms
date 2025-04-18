@@ -22,4 +22,4 @@ composer install && npm install workbox-window --save
 RUN yes | php artisan octane:install --server=roadrunner
 RUN npm run build && php artisan storage:link
 
-CMD ["php artisan octane:start","--server=roadrunner","--port=8080"]
+CMD ["php artisan octane:start","--workers=4","--server=roadrunner","--port=8080"]
