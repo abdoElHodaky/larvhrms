@@ -1,5 +1,7 @@
 FROM spacetabio/roadrunner-alpine:8.1-base-1.11.0
 RUN apk add -U --no-cache nghttp2-dev nodejs npm unzip tzdata
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+
 COPY . /var/www/html
 
 # Laravel config
