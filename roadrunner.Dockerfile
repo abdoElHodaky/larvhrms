@@ -5,7 +5,7 @@ RUN docker-php-ext-install bcmath
 COPY . /var/www/html
 WORKDIR /var/www/html
 # Laravel config
-ENV APP_KEY base64:Zndza2ttMm9kbnNkcmlmeHlmYnlnb3RzOTJxMnBnNHY=
+#ENV APP_KEY base64:Zndza2ttMm9kbnNkcmlmeHlmYnlnb3RzOTJxMnBnNHY=
 ENV APP_ENV production
 ENV APP_DEBUG true
 ENV LOG_CHANNEL stderr
