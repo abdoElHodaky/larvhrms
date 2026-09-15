@@ -30,6 +30,6 @@ RUN npm run build && php artisan storage:link
  #   && cp roadrunner-2.12.0-linux-amd64/rr /usr/local/bin/rr \
  #   && rm -rf roadrunner-2.12.0*
 EXPOSE 8080
-CMD ["bash -c ","php artisan octane:start","--workers=4"]
+CMD ["php artisan octane:start","--workers=4"]
 #CMD ["php"," artisan"," octane:start","--workers=4","--port=8080"]
 #CMD [" php artisan octane:start --workers=4 --server=roadrunner --port=8080"]
