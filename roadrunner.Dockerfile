@@ -29,5 +29,5 @@ RUN npm run build && php artisan storage:link
  #   && tar -zxvf roadrunner-2.12.0-linux-amd64.tar.gz \
  #   && cp roadrunner-2.12.0-linux-amd64/rr /usr/local/bin/rr \
  #   && rm -rf roadrunner-2.12.0*
-EXPOSE 8080
+EXPOSE 8000
 ENTRYPOINT ["php", "artisan", "octane:start"]
