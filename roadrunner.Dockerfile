@@ -25,4 +25,5 @@ composer require laravel/octane && npm install workbox-window --save
 RUN yes | php artisan octane:install --server=roadrunner
 RUN npm run build && php artisan storage:link
 EXPOSE 8080
-CMD ["php"," artisan"," octane:start","--workers=4","--server=roadrunner","--port=8080"]
+#CMD ["php"," artisan"," octane:start","--workers=4","--server=roadrunner","--port=8080"]
+CMD ["no | php artisan octane:start --workers=4 --server=roadrunner --port=8080"]
