@@ -35,3 +35,6 @@ console_command = 'php /var/www/html/artisan tinker'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
+
+[processes]
+app = "php artisan octane:start --workers=4 --server=roadrunner --port=8080"
