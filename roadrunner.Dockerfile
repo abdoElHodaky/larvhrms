@@ -31,4 +31,4 @@ RUN npm run build && php artisan storage:link
  #   && rm -rf roadrunner-2.12.0*
 EXPOSE 8000
 ENTRYPOINT ["php", "artisan", "octane:start"]
-CMD ["--server=roadrunner", "--worker=5","--host=0.0.0.0", "--port=8000"]
+CMD ["--server=roadrunner", "--workers=5","max-requests=1450","--host=0.0.0.0", "--port=8000"]
