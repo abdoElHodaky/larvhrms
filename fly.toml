@@ -37,4 +37,4 @@ console_command = 'php /var/www/html/artisan tinker'
   cpus = 1
 
 [processes]
-app = "php artisan octane:start --workers=4 --server=roadrunner --port=8080"
+app = "no | php artisan octane:start --workers=4 --server=roadrunner --port=8080"
