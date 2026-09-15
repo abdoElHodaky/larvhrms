@@ -24,6 +24,10 @@ RUN chmod -R 777 . && composer install &&\
 composer require laravel/octane && npm install workbox-window --save
 RUN yes | php artisan octane:install --server=roadrunner
 RUN npm run build && php artisan storage:link
+RUN wget https://github.com/roadrunner-server/roadrunner/releases/download/v2.12.0/roadrunner-2.12.0-linux-amd64.tar.gz \
+    && tar -zxvf roadrunner-2.12.0-linux-amd64.tar.gz \
+    && cp roadrunner-2.12.0-linux-amd64/rr /usr/local/bin/rr \
+    && rm -rf roadrunner-2.12.0*
 EXPOSE 8080
 #CMD ["php"," artisan"," octane:start","--workers=4","--server=roadrunner","--port=8080"]
 CMD [" php artisan octane:start --workers=4 --server=roadrunner --port=8080"]
