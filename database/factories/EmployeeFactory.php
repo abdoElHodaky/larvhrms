@@ -55,7 +55,7 @@ class EmployeeFactory extends Factory
             'cv' => null,
             'image' => null,
             'position_id' => function () {
-                return \App\Models\Position::inRandomOrder()->value('id')        },
+                return \App\Models\Position::inRandomOrder()->value('id');},
             'training' => $this->faker->boolean,
             'schedule_id' => null,
         ];
