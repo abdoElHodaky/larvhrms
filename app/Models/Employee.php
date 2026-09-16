@@ -66,8 +66,9 @@ class Employee extends Model
         // Generate UUID before creating a new record
         static::creating(function ($model) {
             $model->uuid = (string) Str::uuid();
-            $model->image=implode(["https://avatar.iran.liara.run/",
-            "username/","?username={$model->first_name}+{$model->last_name}"],"");
+            $model->image = "https://avatar.iran.liara.run/username/?username={$model->first_name}+{$model->last_name}";
+          //  $model->image=implode(["https://avatar.iran.liara.run/",
+           // "username/","?username={$model->first_name}+{$model->last_name}"],"");
         });
 
     }
