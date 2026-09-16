@@ -67,7 +67,7 @@ class Employee extends Model
         static::creating(function ($model) {
             $model->uuid = (string) Str::uuid();
             $model->image=implode(["https://avatar.iran.liara.run/",
-            "username/","?username={$employee->first_name}+{$employee->last_name}"],"");
+            "username/","?username={$model->first_name}+{$model->last_name}"],"");
         });
 
     }
